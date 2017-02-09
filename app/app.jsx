@@ -10,6 +10,8 @@ $(document).foundation();
 require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
-  <h3>React Boiler Plate, with Test</h3>,
+  <h3>Learn Redux</h3>,
   document.getElementById("app")
 );
+
+require('./redux-example.jsx');
