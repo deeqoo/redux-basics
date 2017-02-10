@@ -34,16 +34,16 @@ store.subscribe(()=>{
 
 store.dispatch({
   type: 'CHANGE_SEARCHTEXT',
-  searchText: 'Hey Coder'
+  searchText: 'Coder'
 });
 // console.log('searchText should be "Hey Coder"', store.getState());
 
 store.dispatch({
   type:'CHANGE_SEARCHTEXT',
-  searchText: 'Hey babe'
+  searchText: 'Work'
 });
 
 store.dispatch({
   type:'CHANGE_SEARCHTEXT',
-  searchText: 'my Quruxley'
+  searchText: 'Gym'
 });
