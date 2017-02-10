@@ -9,10 +9,10 @@ $(document).foundation();
 // App csss
 require('style!css!sass!applicationStyles');
 
-ReactDOM.render(
-  <h3>Learn Redux</h3>,
-  document.getElementById("app")
-);
+// ReactDOM.render(
+//   <h3>Learn Redux</h3>,
+//   document.getElementById("app")
+// );
 
 // require('./redux-example.jsx');
 require('./redux-todo-example.jsx');

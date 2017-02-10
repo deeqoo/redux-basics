@@ -21,12 +21,29 @@ var reducer = (state = stateDefault, action)=> {
   }
 }
 
-var store = redux.createStore(reducer);
+var store = redux.createStore(reducer, redux.compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+));
 var currentState = store.getState();
 console.log(currentState);
+
+store.subscribe(()=>{
+  var state = store.getState();
+  document.getElementById('app').innerHTML = state.searchText;
+});
 
 store.dispatch({
   type: 'CHANGE_SEARCHTEXT',
   searchText: 'Hey Coder'
 });
-console.log('searchText should be "Hey Coder"', store.getState());
+// console.log('searchText should be "Hey Coder"', store.getState());
+
+store.dispatch({
+  type:'CHANGE_SEARCHTEXT',
+  searchText: 'Hey babe'
+});
+
+store.dispatch({
+  type:'CHANGE_SEARCHTEXT',
+  searchText: 'my Quruxley'
+});
